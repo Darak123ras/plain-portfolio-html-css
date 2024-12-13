@@ -8,6 +8,46 @@
      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <style>
+      .navbar-toggler {
+         display: none;
+            background-color: white;
+            color: #528ac6;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+      }
+        @media (max-width: 692px) {
+            .navbar-toggler {
+                display: block;
+            }
+            .hidden{
+               display: none;
+            }
+            .hidden.active {
+                  display: flex;
+                  background-color: #59417b;
+                  padding: 10px 0;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  width: 100%;
+                  z-index: 1000;
+            } 
+            ul {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+
+            ul li {
+                padding: 5px 20px;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -15,13 +55,14 @@
            <div class="logo">
               <img class="d"src="./Images/pngwing.com.png" alt=""> <span class="_name">DMR</span>
            </div>
-           <div >
+           <button class="navbar-toggler" id="toggle-button" ><img src="./Images/menu-bar.png" alt="" width="20px" height="15px"></button>
+           <div class="hidden" id="menu">
               <ul>
                  <li><a href="/">Home</a></li>
-                 <li><a href="/">About</a></li>
-                 <li><a href="/">Projects</a></li>
-                 <li><a href="/">Contact</a></li>
-                 <li><a href="/">Feedback</a></li>
+                 <li><a href="#about">About</a></li>
+                 <li><a href="#section4">Projects</a></li>
+                 <li><a href="#contact">Contact</a></li>
+                 <li><a href="#feedback">Feedback</a></li>
               </ul>
            </div>
         </nav>
@@ -49,7 +90,7 @@
             <!-- </div> -->
         </section>
         <section>
-            <div class="about">
+            <div class="about" id="about">
                <div class="grid-container">
                      <div class="row">
                         <h1>About</h1>
@@ -71,7 +112,7 @@
           </section>
 
           <!-- Skills Section -->
-          <section class="skill">
+          <section class="skill" >
             <h1>Skills</h1>
                
                <div class="img-skills">
@@ -144,7 +185,7 @@
          </section>
 
           <!-- CONTACT SECTION -->
-         <section class="feedback">
+         <section class="feedback" id="feedback">
             <div class="container" >
                <div class="container-box">
                    <div class="circle1">
@@ -170,7 +211,7 @@
     </main>
     
       <!-- FOOTER -->
-      <footer class="footer-part">
+      <footer class="footer-part" id="contact">
          <!-- <div class="footer-part"> -->
             <div class="footer">
                <div class="footerFirst">
@@ -207,6 +248,12 @@
         var typed = new Typed('#element', {
           strings: ['Software Engineer','Full Stack Developer'],
           typeSpeed: 50,
+        });
+        const toggleButton = document.getElementById('toggle-button');
+        const menu = document.getElementById('menu');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
         });
       </script>
     <script src="./script.js" charset="utf-8"></script>
