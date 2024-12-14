@@ -686,3 +686,8 @@ footer .footer-rights{
         font-size: 5px;
     }
 }
+@media (max-width:600px){
+    .footer-part .footer .footerFirst{
+        display: none;
+    }
+}
