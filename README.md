@@ -8,7 +8,6 @@ Clean Layout: A simple and elegant layout to present personal or professional de
 Customizable: Easy to edit and expand to meet individual needs. <br/>
 Lightweight: Built with minimal dependencies, ensuring fast load times. <br/>
 
-
 <h2>🛠️ Technologies Used</h2>
 HTML: The backbone of the structure.<br/>
 CSS: For styling and responsiveness.<br/>
@@ -21,10 +20,8 @@ Contact<br/>
 Feedback <br/>
 
 <h2>Sample Output: </h2>
-<img width="505"  alt="image" src="https://github.com/user-attachments/assets/55df4c67-9128-46dd-a227-ca6d905a8636" >
-
-<img width="505" alt="image" src="https://github.com/user-attachments/assets/37eeca6c-a200-4632-8798-d1e36a28465b">
-
-
+<video src="https://github.com/user-attachments/assets/dfd6f2ad-b6a7-48fb-ad13-94e75b49afc3"/>
+  
 <h2>📬 Feedback</h2>
 Have suggestions or found a bug? Feel free to open an issue or contact me at darakhshanmrashid109@example.com.
+😊 Leave a ⭐
