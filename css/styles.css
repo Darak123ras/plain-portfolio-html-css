@@ -445,13 +445,12 @@ nav ul li a:hover{
 
 
 footer{
-    display: grid;
-    grid-template-rows: repeat(2,80px);
-    align-items:flex-end;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 23px 50px;
     justify-content: space-evenly;
     background-color: antiquewhite;
-    margin-top: 59px;
 }
 .footer img{
     width: 30px;
@@ -676,26 +675,14 @@ footer .footer-rights{
 /* footer media*/
 @media (max-width:1010px){
     .footer-part{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 200px;
-        padding: 10px;
-        max-width: 1200px ;
-        width: auto;
+        flex-wrap: wrap;
     }
     .footer{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        
         width: 60%;
         font-size: 5px;
-    }
-    .footer h3{
-        font-size: 15px;
-    }
-    .footer-rights{
-        flex-wrap: wrap;
-        font-size: 9px;
     }
 }
