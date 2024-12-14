@@ -217,42 +217,94 @@ nav ul li a:hover{
 
 
 /* SKILLS */
-.skill{
+.skill {
+    width: 100%;
+    max-height: 100vh;
     background: rgb(100, 103, 117);
-    
-    margin: 90px 0 0 30px;
-    padding: 30px;
-    height: 90vh;
+    margin: 90px 0 0 0; /* Center alignment */
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrollbars during animation */
 }
-.skill h1{
-    font-family:Georgia, 'Times New Roman', Times, serif ;
+
+.skill h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2rem;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    margin-top: 20px;
     text-align: center;
     text-decoration: underline;
+    color: #fff;
+}
 
-}
-.skill div{
-    margin: 10px 0 0 50px;
-    height: 70vh;
-    padding: 50px 70px;
-    display: grid;
-    grid-template-columns: repeat(4,150px);
-    grid-template-rows: repeat(2,150px);
-    gap: 20px;
+/* Skills Container */
+.skill .img-skills {
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
     justify-content: center;
-    
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.skill .img-skills .s-img{
-    justify-content: space-around;
-    width: 120px;
-    height: 120px;
-    padding: 10px 10px;
+
+/* Individual Skill Images */
+.skill .img-skills .s-img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Start with invisible */
+    transform: translateX(100%); /* Start position: Right off-screen */
+    animation: slideIn 1.5s ease-out forwards; /* Apply animation */
+    transition: transform 0.3s ease;
 }
-.skill .img-skills .s-img:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    border-radius: 500px !important;
+
+/* Hover Effect */
+.skill .img-skills .s-img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+/* Delay Each Icon for Staggered Animation */
+.skill .img-skills .s-img:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.skill .img-skills .s-img:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.skill .img-skills .s-img:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.skill .img-skills .s-img:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.skill .img-skills .s-img:nth-child(5) {
+    animation-delay: 1s;
+}
+.skill .img-skills .s-img:nth-child(6) {
+    animation-delay: 1.2s;
+}
+.skill .img-skills .s-img:nth-child(7) {
+    animation-delay: 1.4s;
+}
+.skill .img-skills .s-img:nth-child(8) {
+    animation-delay: 1.6s;
 }
 
 /* Project Section: SLIDE SHOW */
@@ -536,27 +588,33 @@ footer .footer-rights{
 
 
 
-@media (max-width:780px){
-    .skill{
-        padding: 20px;
-        height: 120vh;
+@media (max-width: 768px) {
+    .skill h1 {
+        font-size: 1.8rem;
+    }
+    .skill .img-skills .s-img {
+        /* border-radius: 50%; */
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill h1 {
+        font-size: 1.5rem;
     }
     .skill .img-skills {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 5px;
-        justify-content: center;
-        max-width: 100%; 
-        margin: 0 auto; 
-        padding: 10px; 
-        box-sizing: border-box;
+        gap: 10px;
     }
+    .skill .img-skills .s-img {
+        width: 60px;
+        height: 60px;
+    }
+}
 
-    .skill .s-img {
-        width: 100%;
-        height: auto; 
-        max-width: 1000px; 
-        margin: 0 auto; 
+@media (max-width:1008px) {
+    .container hr {
+        display: none;
     }
 }
 
