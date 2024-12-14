@@ -18,10 +18,12 @@ About<br/>
 Projects<br/>
 Contact<br/>
 Feedback <br/>
+<h2>📬 Feedback</h2>
+Have suggestions or found a bug? Feel free to open an issue or contact me at darakhshanmrashid109@example.com.
+😊 Leave a ⭐
+
 
 <h2>Sample Output: </h2>
 <video src="https://github.com/user-attachments/assets/dfd6f2ad-b6a7-48fb-ad13-94e75b49afc3"/>
   
-<h2>📬 Feedback</h2>
-Have suggestions or found a bug? Feel free to open an issue or contact me at darakhshanmrashid109@example.com.
-😊 Leave a ⭐
+
